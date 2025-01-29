@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maxiumum-scale=1.0, user-scalable=no">
+    <title>Travis Morgan | Portfolio</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div id="bg"></div>
+    <header>
+        <nav class="navbar">
+            <p class="navbar-name">Travis Morgan</p>
+            <ul class="menu">
+                <li><a href="#about" class="links">About</a></li>
+                <li><a href="#projects" class="links">Projects</a></li>
+                <li><a href="#experience" class="links">Experience</a></li>
+                <li><div id="theme-toggle"><i class="fa-solid fa-circle-half-stroke"></i></div></li>
+                <i class="fa-solid fa-x mobile-icons"></i>
+            </ul>
+        </nav>
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+    </header>
+
+    <main>
+        <section class="intro-section">
+            <div class="cover"></div>
+            <div class="welcome-text">
+                <h1>Hello, I'm <span>Travis</span>👋</h1>
+                <p id="sub-heading"></p>
+            </div>
+            <a class="scroll-down-arrow" href="#projects"></a>
+        </section>
+
+
+        <section class="about-section" id="about">
+            <div class="text">
+                <h1>About Me</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus amet reiciendis fuga. Veniam ad sed ullam fugit omnis, porro corrupti nemo doloribus assumenda dolores, eveniet quo perspiciatis asperiores! Quam, ut?</p>
+            </div>
+            <div class="info">
+                <P><span>2</span><br>Experiences</P>
+                <P><span>4</span><br>Completed Projects</P>
+                <P><span>30</span><br>Contributions</P>
+            </div>
+        </section>
+
+        <section class="tech-stack">
+            <h1 id="tech-stack-heading">My Tech Stack</h1>
+            <div class="container">
+                <div class="tech-item scroll appear" id="csharp">
+                    <i class="devicon-csharp-plain"></i>
+                </div>
+                <div class="tech-item scroll appear" id="HTML">
+                    <i class="devicon-html5-plain"></i>
+                </div>
+                <div class="tech-item scroll appear" id="CSS">
+                    <i class="devicon-css3-plain"></i>
+                </div>
+                <div class="tech-item scroll appear" id="SQL">
+                    <i class="devicon-microsoftsqlserver-plain-wordmark"></i>
+                </div>
+                <div class="tech-item scroll appear" id="vs-studio">
+                    <i class="devicon-visualstudio-plain"></i>
+                </div>
+                <div class="tech-item scroll appear" id="dot-net">
+                    <i class="devicon-dot-net-plain"></i>
+                </div>
+            </div>
+
+            <div class="blur" id="tech-blur">
+
+            </div>
+        </section>
+
+        <section class="work-section" id="projects">
+            <h1 class="scroll">My Featured Work</h1>
+            <div class="box-container">
+                <div class="box" id="box-1">
+                    <img src="images/pong-main-menu.png" class="Image">
+                    <div class="box-content">
+                        <h3>Pong Game</h3>
+                        <p>The classic pong game. Thats all. Not really. Single player and two player options with three levels of difficulty of AI to play against.</p>
+                        <div class="labels">
+                            <span class="label">C#</span>
+                            <span class="label">.NET</span>
+                            <span class="label">Windows Forms</span>
+                        </div>
+                        <a href="https://github.com/TravisF82/pong-game" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+
+                </div>
+                <div class="box" id="box-2">
+                    <img src="images/portfolio-page.png" class="Image">
+                    <div class="box-content">
+                        <h3>Portfolio Website</h3>
+                        <p>My personal portfolio website showcasing a bit about me, my technical ability, my work experience and personal projects. Also my first time ever using HTML, CSS and Javascript.</p>
+                        <div class="labels">
+                            <span class="label">HTML</span>
+                            <span class="label">CSS</span>
+                            <span class="label">Javascript</span>
+                            <a href="https://github.com/TravisF82/portfolio-website" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box" id="box-3">
+                    <img src="images/calculator.png" class="Image">
+                    <div class="box-content">
+                        <h3>Calculator App</h3>
+                        <p>A modern looking, multi-purpose calculator. Featuring basic functionality, with scientific and higher level functions. Including real time currency conversion rates, measurment conversion and other real world conversion applications..</p>
+                        <div class="labels">
+                            <span class="label">C#</span>
+                            <span class="label">.NET</span>
+                            <span class="label">Windows Forms</span>
+                        </div>
+                        <a href="https://github.com/TravisF82/winforms-calculator" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            
+        </section>
+
+        <section class="experience-section" id="experience">
+            <h1 class="scroll">My Experience</h1>
+            <div class="timeline">
+
+                <div class="checkpoint scroll">
+                    <div class="content">
+                        <h2>A-Level Software Systems Development</h2>
+                        <h3>&lt;h3&gt;</h3>
+                        <p>My first ever line of code. Learning how to plan, develop, test and report on two individual projects from start to finish. Learning how to use C#, .NET and SQL databases.</p>
+                        <h3>&lt;/h3&gt;</h3>
+
+                    </div>
+                </div>
+
+                <div class="checkpoint scroll">
+                    <div class="content">
+                        <h2>Work Experience - Kainos</h2>
+                        <h3>&lt;h3&gt;</h3>
+                        <p>My introduction to web-development languages and team based project building. Working cooperatively to plan, design, build and present a website.</p>
+                        <h3>&lt;/h3&gt;</h3>
+
+                    </div>
+                </div>
+
+                <div class="checkpoint scroll">
+                    <div class="content">
+                        <h2>Kainos Code Camp</h2>
+                        <h3>&lt;h3&gt;</h3>
+                        <p>Networking with other software engineering students, improving my web development skills and taking part in talks about the world of software development in an industry environment.</p>
+                        <h3>&lt;/h3&gt;</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="blur" id="experience-blur">
+                
+            </div>
+        </section>
+    </main>
+
+
+
+    
+    <div class="side-icons">
+        <div class="social-icons">
+            <a href="https://www.instagram.com/travis.morgann/" target="_blank" title="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/travis-morgan-218013321/" target="_blank" title="linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/TravisF82" target="_blank" title="github"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+            <ul class="footer-links">
+                <li><a href="https://www.instagram.com/travis.morgann/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/travis-morgan-218013321/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/TravisF82" target="_blank">GitHub</a></li>
+            </ul>
+            <a href="#" id="logo"><img src="images/android-chrome-192x192.png" alt="Logo"></a>
+            <p id="copyright">©2024 <span>Designed By</span> Travis Morgan. All rights reserved.</p>
+    </footer>
+
+
+
+    <script type="text/javascript" src="scripts/app/Index.js"></script>
+    <script type="text/javascript" src="scripts/lib/particles.min.js"></script>
+    <script type="text/javascript" src="scripts/lib/custom.js"></script>
+
+</body>
+</html>
