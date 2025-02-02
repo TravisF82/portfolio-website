@@ -9,11 +9,6 @@ html{
 :root{
     color-scheme: dark;
     --body-color: #1d1d20;
-    --html-color: #E44D25;
-    --css-color: #264DE4;
-    --javascript-color: #F7DD1E;
-    --csharp-color: #A179DC;
-    --sql-color: #DB7533;
     --metallic-blue: #295184;
 }
 :root.lightMode{
@@ -85,14 +80,6 @@ img{
         transform: translateY(6.25em);
     }
 }
-@keyframes intro{
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 100%;
-    }
-}
 @keyframes checkpoint-move-in-left{
     0%{
         transform: translateX(34em);
@@ -126,7 +113,15 @@ img{
       transform: scale(1);
       opacity: 1;
     }
-  }
+}
+@keyframes timeline-down{
+    from{
+        height: 0;
+    }
+    to{
+        height: 100%;
+    }
+}
 
 /* ---------------landing page--------------- */
 
@@ -172,7 +167,6 @@ img{
 
 }
 .welcome-text p{
-    font-family: 'Roboto Mono', monospace;
     font-size: 2em;
     text-transform: uppercase;
 
@@ -434,8 +428,7 @@ main p{
 }
 
 /* ---------------tech stack section--------------- */
-
-.tech-stack .container{
+.tech-container{
     position: relative;
     width: 100%;
     height: 500px;
@@ -592,7 +585,7 @@ main p{
     opacity: 1;
 }
 
-.container i{
+.tech-container i{
     font-size: 8rem;
     color: #fefdff;
     text-align:center;
@@ -622,31 +615,60 @@ main p{
 
 /* ---------------work section--------------- */
 
-
+.work-section{
+    justify-content: center;
+}
 .work-section h1{
     color: white;
     font-weight: 700;
-    font-size: 3em;
+    font-size: 3rem;
     text-align: center;
 }
 .work-section .box-container{
-    margin: 5em 2em;
+    width: 100%;
     display: grid;
-    grid-auto-flow: column;
-    gap: 0.5em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 .work-section .box-container .box{
-    margin: 5em 2em;
-    background-color: #000000;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--body-color);
+    height: 600px;
+    width: 500px;
+    border: 2px solid #fff;
     border-radius: 1.5em;
     overflow: hidden;
+    margin: 0 auto;
+}
+.work-section .box-container .box .box-content{
     position: relative;
+    flex-grow: 1;
+}
+.work-section .box-container .box img{
+    margin: 10px 10px 0px;
+    height: 50%;
+    width: calc(100% - 20px);
+    border-radius: 10px;
+}
+#calculator{
+    display: block;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 .box .labels{
+    position: absolute;
+    bottom: 20px;
     display: flex;
+    flex-direction: row;
     gap: 8px;
     flex-wrap: wrap;
-    margin: 30px 50px;
+    margin: 0 50px;
 }
 .box .labels .label{
     border: 2px solid white;
@@ -665,9 +687,6 @@ main p{
     transition: all 0.2s ease-out;
     transform: translateY(0);
 }
-.work-section .box-container .box .box-content{
-    padding: 16px;
-}
 .work-section .box-container .box h3{
     color: white;
     font-weight: 650;
@@ -677,9 +696,6 @@ main p{
     font-weight: 300;
     margin-left: 50px;
     line-height: 28px;
-}
-.work-section .box-container .box .Image{
-    max-width: 100%;
 }
 .work-section .box-container .box .fa-github{
     color: white;
@@ -701,92 +717,100 @@ main p{
     text-align: center;
     margin-top: 1em;
 }
-.experience-section h2{
-    color: white;
-    font-weight: 600;
-    font-size: 2em;
-    text-align: center;
-    position: relative;
-}
-.checkpoint h2{
-    background: -webkit-linear-gradient(left, #f36b2d, #a12688);
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent;
-    background: linear-gradient(to right, #f36b2d, #a12688);
-    background-clip: text;
-}
-.checkpoint h3{
-    color: gray;
-    text-align: left;
-    letter-spacing: 1.1px;
-    user-select: none;
-}
-
 
 .timeline{
-    margin: 5em auto;
-    max-width: 34em;
     position: relative;
+    margin: 100px auto;
+    max-width: 1200px;
 }
-.timeline::before{
+.timeline::after{
     content: '';
     position: absolute;
+    height: 100%;
+    width: 5px;
+    background-color: #fff;
     top: 0;
-    bottom: 0;
     left: 50%;
-    width: 3px;
-    background: -webkit-linear-gradient(top, #f36b2d, #a12688);
-    transform: translateX(-50%);
+    margin-left: -3px;
     z-index: -1;
 }
-.timeline .checkpoint{
-    max-width: 34em;
+.container{
     position: relative;
+    padding: 10px 50px;
+    width: 50%;
+    max-width: 1200px;
 }
-.checkpoint .content{
-    border: 2px solid white;
-    padding: 0.8em;
-    text-align: center;
+.experience-box{
+    padding: 25px;
+    background: var(--body-color);
+    position: relative;
+    border: 2px solid #fff;
+    max-width: 1200px;
+    width: 100%;
 }
-.checkpoint p{
-    font-weight: 350;
-    line-height: 28px;
-    margin: 5px 35px;
-    border-left: 2px solid gray;
-    padding-left: 10px;
+.experience-box small{
+    color: #9396a2;
+    display: inline-block;
+    margin-bottom: 20px;
+    user-select: none;
 }
-
-
-.checkpoint:nth-child(odd){
-    padding-left: 3em;
-    transform: translateX(17em);
-    box-shadow: 30px 30px 20px rgba(0,0,0,0.4);
+.experience-box li{
+    line-height: 18px;
+    margin: 10px 0;
 }
-.checkpoint:nth-child(even){
-    padding-right: 3em;
-    transform: translateX(-17em);
+.container:nth-of-type(odd) .experience-box{
     box-shadow: -30px 30px 20px rgba(0,0,0,0.4);
 }
-
-.checkpoint:nth-child(odd) .content::before,
-.checkpoint:nth-child(even) .content::before{
-    content: '';
-    background: white;
-    width: 0.8em;
-    height: 0.8em;
+.container:nth-of-type(even) .experience-box{
+    box-shadow: 30px 30px 20px rgba(0,0,0,0.4);
+}
+.left-container{
+    left: 0;
+}
+.right-container{
+    left: 50%;
+}
+.container-marker{
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    right: -15px;
+    top: 32px;
+    width: 30px;
+    height: 30px;
+    background-color: grey;
+    border: 3px solid #fff;
     border-radius: 50%;
+    z-index: 10;
 }
-.checkpoint:nth-child(odd) .content::before{
-    left: -0.5em;
-    transform: translateY(-6em);
+
+.right-container .container-marker{
+    left: -15px;
 }
-.checkpoint:nth-child(even) .content::before{
-    right: -0.5em;
-    transform: translateY(-6em);
+
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -15px;
 }
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left: -15px;
+}
+
+
+
 
 
 
@@ -909,12 +933,12 @@ main p{
 .appear-animation{
     animation: appear 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
-.checkpoint:nth-child(odd).show-checkpoint{
+.checkpoint:nth-of-type(odd).show-checkpoint{
     filter: blur(0);
     animation: checkpoint-move-in-left 1s backwards;
 }
 
-.checkpoint:nth-child(even).show-checkpoint{
+.checkpoint:nth-of-type(even).show-checkpoint{
     filter: blur(0);
     animation: checkpoint-move-in-right 1s backwards;
 }
@@ -930,6 +954,66 @@ main p{
 
 nav .mobile-icons{
     display: none;
+}
+
+@media only screen and (max-width: 1500px){
+    .work-section .box-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+@media only screen and (max-width: 840px){
+    .timeline{
+        margin: 50px auto;
+    }
+    .timeline::after{
+        left: 31px;
+    }
+    .container{
+        width: 100%;
+    }
+    .experience-box{
+        font-size: 0.9rem;
+    }
+    .experience-box h2{
+        font-size: 1.1rem;
+    }
+    .experience-box small{
+        margin-bottom: 10px;
+    }
+    .right-container{
+        left: 0;
+    }
+    .left-container .container-marker{
+        left: 17px;
+    }
+    .right-container .container-marker{
+        left: 17px;
+    }
+    .left-container-arrow, .right-container-arrow{
+        border-right: 15px solid #fff;
+        border-left: 0;
+        left: -15px;
+    }
+
+    .container:nth-of-type(even) .experience-box{
+        box-shadow: 30px 30px 20px rgba(0,0,0,0.4);
+    }
+    .container:nth-of-type(odd) .experience-box{
+        box-shadow: 30px 30px 20px rgba(0,0,0,0.4);
+    }
+
+}
+
+@media only screen and (max-width: 1000px){
+    .work-section .box-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
 }
 
 @media only screen and (max-width: 600px){
@@ -1091,7 +1175,7 @@ body.lightMode{
 .lightMode .experience-section h1{
     color: #000000;
 }
-.lightMode .checkpoint{
+.lightMode .content{
     background-color: #000000;
 }
 .lightMode .checkpoint .content{

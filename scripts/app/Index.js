@@ -3,7 +3,7 @@ window.onload = function(){
 }
 
 let i = 0;
-let text = "AN ASPIRING FULL-STACK SOFTWARE DEVELOPER.";
+let text = "Looking to go from student to developer";
 let speed = 100;
 
 
@@ -39,7 +39,7 @@ const observer = new IntersectionObserver((entries) => {
             }
         }
     });
-});
+}, {threshold: 0.5});
 
 scrollElements.forEach((el) => observer.observe(el));
 

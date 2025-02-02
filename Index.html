@@ -44,7 +44,7 @@
                 <h1>Hello, I'm <span>Travis</span>👋</h1>
                 <p id="sub-heading"></p>
             </div>
-            <a class="scroll-down-arrow" href="#projects"></a>
+            <a class="scroll-down-arrow" href="#about"></a>
         </section>
 
 
@@ -63,7 +63,7 @@
 
         <section class="tech-stack">
             <h1 id="tech-stack-heading">My Tech Stack</h1>
-            <div class="container">
+            <div class="tech-container">
                 <div class="tech-item scroll appear" id="csharp">
                     <i class="devicon-csharp-plain"></i>
                 </div>
@@ -82,7 +82,7 @@
                 <div class="tech-item scroll appear" id="dot-net">
                     <i class="devicon-dot-net-plain"></i>
                 </div>
-            </div>]
+            </div>
             <div class="blur" id="tech-blur">
 
             </div>
@@ -92,7 +92,7 @@
             <h1 class="scroll">My Featured Work</h1>
             <div class="box-container">
                 <div class="box" id="box-1">
-                    <img src="images/pong-main-menu.png" class="Image">
+                    <img src="images/pong-main-menu.png" id="pong">
                     <div class="box-content">
                         <h3>Pong Game</h3>
                         <p>The classic pong game. Thats all. Not really. Single player and two player options with three levels of difficulty of AI to play against.</p>
@@ -106,7 +106,7 @@
 
                 </div>
                 <div class="box" id="box-2">
-                    <img src="images/portfolio-page.png" class="Image">
+                    <img src="images/portfolio-page.png" id="portfolio">
                     <div class="box-content">
                         <h3>Portfolio Website</h3>
                         <p>My personal portfolio website showcasing a bit about me, my technical ability, my work experience and personal projects. Also my first time ever using HTML, CSS and Javascript.</p>
@@ -114,15 +114,15 @@
                             <span class="label">HTML</span>
                             <span class="label">CSS</span>
                             <span class="label">JavaScript</span>
-                            <a href="https://github.com/TravisF82/portfolio-website" target="_blank"><i class="fab fa-github"></i></a>
                         </div>
+                        <a href="https://github.com/TravisF82/portfolio-website" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class="box" id="box-3">
-                    <img src="images/calculator.png" class="Image">
+                    <img src="images/calculator.png" id="calculator">
                     <div class="box-content">
                         <h3>Calculator App</h3>
-                        <p>A modern looking, multi-purpose calculator. Featuring basic functionality, with scientific and higher level functions. Including real time currency conversion rates, measurment conversion and other real world conversion applications..</p>
+                        <p>Features basic functionality, with scientific and higher level functions. Including real time currency conversion rates, measurment conversion and other real world conversion applications..</p>
                         <div class="labels">
                             <span class="label">C#</span>
                             <span class="label">.NET</span>
@@ -132,45 +132,56 @@
                     </div>
                 </div>
             </div>
-
-            
         </section>
 
         <section class="experience-section" id="experience">
             <h1 class="scroll">My Experience</h1>
             <div class="timeline">
+                <div class="container left-container">
+                    <div class="container-marker"></div>
+                    <div class="experience-box">
+                        <h2>Kainos Work Experience</h2>
+                        <small>Jan 2024</small>
+                        <ul>
+                            <li>Designed and developed a website of my choice using HTML, CSS and JavaScript.</li>
+                            <li>Collaborated on a project with my team to develop a website based on a product 
+                                idea that we chose to be a solution for a real-world problem</li>
+                            <li>Presented our product's design and website to Kainos mentors and other colleagues.</li>
+                        </ul>
+                        <span class="left-container-arrow"></span>
+                    </div>
+                </div>
 
-                <div class="checkpoint scroll">
-                    <div class="content">
+                <div class="container right-container">
+                    <div class="container-marker"></div>
+                    <div class="experience-box">
                         <h2>A-Level Software Systems Development</h2>
-                        <h3>&lt;h3&gt;</h3>
-                        <p>My first ever line of code. Learning how to plan, develop, test and report on two individual projects from start to finish. Learning how to use C#, .NET and SQL databases.</p>
-                        <h3>&lt;/h3&gt;</h3>
-
+                        <small>Sep 2023 - Jun 2025</small>
+                        <ul>
+                            <li>I wrote my first ever line of code. It's not great to look back at but I have come a long way</li>
+                            <li>Planned, developed and tested a game made with C#, achieving a grade overall of 96%, placing me within the top scorers in Northern Ireland</li>
+                            <li>Planned, developed and tested a van-maintenance booking system with stock control for a case study company</li>
+                        </ul>
+                        <span class="right-container-arrow"></span>
                     </div>
                 </div>
 
-                <div class="checkpoint scroll">
-                    <div class="content">
-                        <h2>Work Experience - Kainos</h2>
-                        <h3>&lt;h3&gt;</h3>
-                        <p>My introduction to web-development languages and team based project building. Working cooperatively to plan, design, build and present a website.</p>
-                        <h3>&lt;/h3&gt;</h3>
-
-                    </div>
-                </div>
-
-                <div class="checkpoint scroll">
-                    <div class="content">
+                <div class="container left-container">
+                    <div class="container-marker"></div>
+                    <div class="experience-box">
                         <h2>Kainos Code Camp</h2>
-                        <h3>&lt;h3&gt;</h3>
-                        <p>Networking with other software engineering students, improving my web development skills and taking part in talks about the world of software development in an industry environment.</p>
-                        <h3>&lt;/h3&gt;</h3>
+                        <small>Aug 2024</small>
+                        <ul>
+                            <li>Further strengthened my skills in JavaScript, HTML and CSS</li>
+                            <li>Further improved my skills in teamwork, collaboration and creativity </li>
+                            <li>Allowed me to network with other software/computing students with similar 
+                                interests</li>
+                            <li>Took part in engaging talks from people in industry which provided me with relevant 
+                                information about topics such as the increasing role of AI and cybersecurity</li>
+                        </ul>
+                        <span class="left-container-arrow"></span>
                     </div>
                 </div>
-            </div>
-            <div class="blur" id="experience-blur">
-                
             </div>
         </section>
     </main>
