@@ -97,15 +97,16 @@ img{
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #fff;
+    background-color: var(--body-color);
     transition: 1s;
 }
 .intro h2{
     position: absolute;
-    color: black;
+    color: white;
     top: 40%;
     left: 50%;
     transform: translateX(-50%);
+    font-weight: 300;
 }
 
 #bg{
@@ -298,9 +299,11 @@ header{
 }
 
 .navbar-name{
+    position: relative;
     margin: 0;
     font-size: 1.5rem;
     font-weight: bold;
+    z-index: 1;
 }
 
 
@@ -340,7 +343,7 @@ header{
 .side-icons .social-icons a .fa-instagram:hover,
 .side-icons .social-icons a .fa-linkedin:hover,
 .side-icons .social-icons a .fa-github:hover{
-    color: #0ae990;
+    color: #9e9eff;
     transform: scale(1.1);
     transition: 0.3s ease;
 }
@@ -390,7 +393,32 @@ main p{
     background: linear-gradient(#f43da5, #e269ae);
     -webkit-background-clip: text;
     background-clip: text;
-
+    transition: font-size 0.3s ease;
+}
+.about-section .text .highlight:hover{
+    font-size: 1.8rem;
+}
+.about-section .text .highlight::before{
+    content: '💗';
+    color: black;
+    font-size: 0.2rem;
+    display: flex;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 120px;
+    transform: translate(3em, -0.3em);
+    transform-origin: center;
+    transition: transform 0.6s ease, opacity 0.3s ease;
+    z-index: -2;
+    opacity: 0;
+}
+.about-section .text .highlight:hover::before{
+    font-size: 1.5rem;
+    transform: translate(9em, -2.3em) rotate(20deg);
+    opacity: 1;
 }
 @keyframes spin{
     from{
